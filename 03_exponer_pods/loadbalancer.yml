@@ -1,13 +1,14 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: nginx-hello-loadbalancer
+  name: nginx-personalizado-loadbalancer
 spec:
   type: LoadBalancer
   selector:
-    app: nginx-hello
+    app: nginx-personalizado
+    ver: "3"
   ports:
     - targetPort: 80  # endpoint
       port: 80        # loadbalancer
   externalIPs:
-    - 172.20.227.242  # nodo con IP pública
+    - 172.20.227.8  # nodo con IP pública
