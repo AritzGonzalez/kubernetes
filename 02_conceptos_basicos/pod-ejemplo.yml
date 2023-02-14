@@ -25,3 +25,18 @@ spec:
   volumes:
     - name: html
       emptyDir: { }
+
+##
+## apiVersion: v1
+## kind: Pod
+## metadata:
+	## name: nginx-hello
+	## labels:
+		## app: nginx-hello
+    		## ver: "1"
+	## spec:
+  	## containers:
+    		## - name: nginx
+		## image: nginxdemos/hello:latest
+		## ports:
+  			## - containerPort: 80
